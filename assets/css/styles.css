@@ -290,24 +290,357 @@ body.dark-theme {
   align-items: flex-end;  
 }
 
+.home__perfil img {
+  width: 150px;
+}
+
+.home__shape-wawes,
+.home__shape-circle {
+  position: absolute;
+  opacity: .1;  
+}
+
+.home__shape-wawes {
+  /* width: 50px; */
+  width: 35px;
+  /* left: -1.5rem; */
+  left: -1.1rem;
+  /* top: 5rem; */
+  top: 4rem;
+  /* z-index: -1; */
+}
+
+.home__shape-circle {
+  /* width: 150px; */
+  width: 140px;
+  /* bottom: -2rem; */
+  bottom: -1.8rem;
+  /* right: -3rem; */
+  right: -1.5rem;
+  transform: rotate(15deg);
+  z-index: -1;
+}
+
+.home__social {
+  justify-self: center;
+  display: flex;
+  column-gap: 1.25rem;
+}
+
+.home__social-link {
+  font-size: 1.25rem;
+  color: var(--text-color-light);
+  transition: color .3s;
+
+}
+
+.home__social-link:hover {
+  color: var(--title-color);
+}
+
+.home__info {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.home__info-title {
+  font-family: var(--body-font);
+  font-size: var(--smaller-font-size);
+  font-weight: 400;
+  color: var(--text-color-light);
+  margin-bottom: 1rem;
+}
+
+.home__info-description,
+.home__info-number {
+  font-family: var(--title-font);
+  color: var(--title-color);  
+}
+
+.home__info-description {
+  padding-right: 4rem;
+}
+
+.home__info-number {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+
 
 
 /*=============== SKILLS ===============*/
+.skills__container {
+  row-gap: 3.5rem;
+}
 
+.skills__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: .5rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 2.5rem;
+}
+
+.skills__title i {
+  font-size: 1rem;
+  font-weight: initial;
+}
+
+.skills__info,
+.skills__data,
+.skills__blob {
+  display: grid;
+}
+
+.skills__info {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 2rem;
+}
+
+.skills__data {
+  justify-content: center;
+  text-align: center;
+}
+
+.skills__blob {
+  width: 80px;
+  height: 100px;
+  background-color: var(--container-color);
+  border-radius: 3rem;
+  place-items: center;
+  margin-bottom: 1rem;
+}
+
+.skills__blob img {
+  width: 40px;
+}
+
+.skills__name {
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+}
+
+.skills__subtitle {
+  font-size: var(--tiny-font-size);
+  color: var(--text-color-light);
+}
 
 /* Animation skills */
+.skills__blob:hover img{
+  animation: bounce-skills .6s;
+}
 
+@keyframes bounce-skills {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(-6px);
+  }
+  40% {
+    transform: translate(0);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+  80% {
+    transform: translate(0);
+  }
+}
 
 /*=============== QUALIFICATION ===============*/
+.qualification {
+  position: relative;
+}
 
+.qualification__container {
+  row-gap: 3.5rem;
+}
 
+.qualification__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: .5rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 2rem;
+}
+
+.qualification__title i {
+  font-size: 1rem;
+  font-weight: initial;
+}
+
+.qualification__info {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.qualification__name {
+  font-size: var(--normal-font-size);
+  margin-bottom: 1.25rem;
+}
+
+.qualification__country,
+.qualification__year {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.qualification__country {
+  margin-bottom: .75rem;
+}
+
+.qualification__img {
+  width: 150px;
+  position: absolute;
+  right: -3rem;
+  bottom: 12rem;
+  transform: rotate(15deg);
+  opacity: .1;
+}
 /*=============== SERVICES ===============*/
+.services__container {
+  row-gap: 2.5rem;
+  justify-content: center;  
+}
 
+.services__card {
+  position: relative;
+  width: 228px;
+  height: 322px;
+  background-color: var(--container-color);
+  text-align: center;
+  padding: 3.5rem 1rem;
+  border-radius: 7.25rem;  
+}
+
+.services__card i {
+  display: block;
+  font-size: 2rem;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+  transition: transform .8s;  
+}
+
+.services__title {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 1.5rem;
+}
+
+.services__border {
+  width: 248px;
+  height: 342px;
+  border: 1.8px solid var(--text-color-light);
+  border-radius: 7.75rem;
+  position: absolute;
+  inset: 0;
+  left: -10px;
+  margin: auto;
+  z-index: -1;
+  transition: opacity .6s;
+  opacity: 0;
+}
+
+.services__card:hover i {
+  transform: rotateY(360deg);
+}
+
+.services__card:hover .services__border{
+  opacity: 1;
+}
 
 /*=============== PROJECTS ===============*/
+.projects__container {
+  overflow: initial;
+}
 
+.projects__content {
+  display: grid;
+  justify-content: center;
+}
+
+.projects__img {
+  width: 250px;
+  border-radius: .75rem;
+  margin-bottom: 1.25rem;
+}
+
+.projects__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.projects__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 1.25rem;
+  margin: .5rem 0 1.25rem;
+}
+
+.projects__button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+}
+
+.projects__button i {
+  font-size: 1rem;
+  transition: transform .3s;
+}
+
+.projects__button:hover i {
+  transform: translateX(.25rem);
+}
 
 /* Swiper class */
+.projects__container .swiper-button-prev::after,
+.projects__container .swiper-button-next::after {
+  content:'';
+}
+
+.projects__container .swiper-button-prev,
+.projects__container .swiper-button-next {
+  width: initial;
+  height: initial;
+  margin: initial;
+  font-size: 2.5rem;
+  color: var(--title-color);
+}
+
+.projects__container .swiper-button-prev {
+  left: -1rem;
+  top: 4.5rem;
+}
+
+.projects__container .swiper-button-next {
+  right: -1rem;
+  top: 4.5rem;
+}
+
+.projects__container .swiper-slide {
+  margin-bottom: 4.5rem;
+}
+
+.projects__container .swiper-pagination-bullets {
+  bottom: 0;
+}
+
+.projects__container .swiper-pagination-bullet {
+  background-color: var(--text-color-light);
+  opacity: initial;
+}
+
+.projects__container .swiper-pagination-bullet-active {
+  background-color: var(--title-color);
+}
 
 
 /*=============== TESTIMONIAL ===============*/
