@@ -94,7 +94,18 @@ img {
 }
 
 /*=============== THEME ===============*/
+.nav__butons {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
 
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: color .3s;
+}
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
@@ -108,6 +119,43 @@ body.dark-theme {
     Color changes in some parts of 
     the website, in light theme
 ==========*/
+.dark-theme .nav,
+.dark-theme .nav__menu,
+.dark-theme .scrollup {
+  background-color: var(--container-color);
+  box-shadow: 0 4px 20px hsla(207, 24%, 8%, .4);
+}
+
+.dark-theme .home__shape-wawes,
+.dark-theme .home__shape-circle,
+.dark-theme .qualification__img,
+.dark-theme .testimonial__img {
+  filter: invert(1);
+}
+
+.dark-theme .home__perfil {
+  background: linear-gradient(180deg,hsla(207, 48%, 72%, 0),hsla(250, 65%, 65%, 1));
+}
+
+.dark-theme .home__social-link {
+  color: var(--title-color);
+}
+
+.dark-theme .section__border {
+  border-bottom: 1px solid hsl(207, 4%, 32%);
+}
+
+.dark-theme::-webkit-scrollbar {
+  background-color: hsl(207, 4%, 15%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb {
+  background-color: hsl(207, 4%, 25%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(207, 4%, 35%);
+}
 
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -243,7 +291,9 @@ body.dark-theme {
 }
 
 /* Active link */
-
+.active-link {
+  color: var(--title-color);
+}
 
 /*=============== HOME ===============*/
 .home__container {
@@ -282,7 +332,7 @@ body.dark-theme {
   /* height: 260px; */
   background: var(--gradient-color);
   border-radius: 5.5rem;
-  /* border-radius:50%; */
+  /* border-radius: 50%; */
   /* border: 0.1px solid var(--text-color-light); */
   overflow: hidden;
   display:flex;
@@ -832,20 +882,118 @@ body.dark-theme {
   font-weight: initial;
 }
 
-/* Status color */
+.contact__message {
+  font-size: var(--small-font-size);
+  position: absolute;
+  bottom: 2.8rem;
+  left: 1.5rem;
+}
 
+/* Status color */
+.color-red {
+  color: hsl(4, 71%, 50%);
+}
+
+.color-blue {
+  color: hsl(207, 56%, 45%);
+}
 
 /*=============== FOOTER ===============*/
+.footer__container {
+  padding: 3rem 0 7rem;
+  text-align: center;
+}
+
+.footer__title {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 1rem;
+}
+
+.footer__list,
+.footer__social {
+  display: flex;
+  justify-content: center;  
+}
+
+.footer__list {
+  margin: 2.5rem 0;
+  column-gap: 2.5rem;
+}
+
+.footer__link {
+  color: var(--title-color);
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__social {
+  column-gap: 1.25rem;
+}
+
+.footer__social-link {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  transition: transform .3s;
+}
+
+.footer__social-link:hover {
+  transform: translateY(-.15rem);
+}
+
+.footer__copy {
+  display: block;
+  margin-top:  4.5rem;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
 
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: .5rem;
+  background-color: hsl(207, 4%, 75%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(207, 4%, 65%);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(207, 4%, 55%);  
+}
+
 
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -30%;
+  background-color: var(--body-color);
+  box-shadow: 0 4px 12px hsla(207, 4%, 35%, .15);
+  display: inline-flex;
+  padding: .35rem;
+  border-radius: .25rem;
+  font-size: 1.1rem;
+  color: var(--title-color);
+  z-index: var(--z-tooltip);
+  transition: bottom .3s, transform .3s;
+}
 
+.scrollup:hover {
+  transform: translateY(-.25rem);
+}
 
 /* Show Scroll Up*/
-
+.show-scroll {
+  bottom: 7.5rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */

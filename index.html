@@ -31,7 +31,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link">
+                        <a href="#home" class="nav__link active-link">
                             <i class="ri-home-5-line"></i> Inicio
                         </a>
                     </li>
@@ -76,8 +76,7 @@
             <div class="nav__butons">
                 <!-- Theme change button -->
                 <i class="ri-moon-line change-theme" id="theme-button"></i>
-                <i class="ri-sun-line"></i>
-
+                
                 <!-- Toggle button -->
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-4-line"></i>
@@ -622,7 +621,6 @@
                                 Me escreva <i class="ri-arrow-right-line"></i> 
                             </a>
                         </div>
-
                     </div>
                 </div>
 
@@ -648,6 +646,8 @@
                             <textarea name="user_project" placeholder="Descreva seu projeto" id="contact-project" class="contact__form-input"></textarea>
                         </div>
 
+                        <p class="contact__message" id="contact-message"></p>
+
                         <button type="submit" class="contact__button">
                             Enviar <i class="ri-arrow-right-up-line"></i>
                         </button>
@@ -659,12 +659,49 @@
 
     <!--==================== FOOTER ====================-->
     <footer class="footer">
+        <div class="footer__container container">
+             <h1 class="footer__title">Leandro Thurler</h1>
+             <p>Desenvedor Fullstack</p>
 
+             <ul class="footer__list">
+                <li>
+                    <a href="#home" class="footer__link">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#skills" class="footer__link">Habilidades</a>
+                </li>
+
+                <li>
+                    <a href="#projects" class="footer__link">Projetos</a>
+                </li>
+             </ul>
+
+             <ul class="footer__social">
+                 <a href="https://www.linkedin.com/in/leandro-thurler/" target="_blank" class="footer__social-link">
+                    <i class="ri-linkedin-box-line"></i>  
+                 </a>
+
+                 <a href="https://github.com/lthurler" target="_blank" class="footer__social-link">
+                    <i class="ri-github-line"></i>
+                 </a>
+
+                 <a href="https://dribbble.com/" target="_blank" class="footer__social-link">
+                    <i class="ri-dribbble-line"></i>
+                 </a>
+             </ul>
+
+             <!-- <span class="footer__copy">
+                &#169; Copyright Bedimcode. All rights reserved
+             </span> -->
+        </div>
     </footer>
 
 
     <!--========== SCROLL UP ==========-->
-
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
 
     <!--=============== SCROLLREVEAL ===============-->
     <script src=""></script>
@@ -673,7 +710,7 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
 
     <!--=============== EMAIL JS ===============-->
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
