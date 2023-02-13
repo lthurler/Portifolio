@@ -16,7 +16,7 @@
 
   /* Change the first number */
   /* Blue: 207 - Purple: 250 - Pink: 356 - Teal: 174 */
-  --gradient-color: linear-gradient(180deg,hsla(207, 48%, 72%, 0),hsla(207, 65%, 65%, 1));
+  --gradient-color: linear-gradient(180deg, hsla(207, 48%, 72%, 0), hsla(207, 65%, 65%, 1));
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -71,10 +71,13 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: background .4s; /* for dark mode animation */
+  transition: background .4s;
+  /* for dark mode animation */
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--title-color);
   font-family: var(--title-font);
   font-weight: var(--font-medium);
@@ -119,10 +122,11 @@ body.dark-theme {
     Color changes in some parts of 
     the website, in light theme
 ==========*/
+
 .dark-theme .nav,
 .dark-theme .nav__menu,
 .dark-theme .scrollup {
-  background-color: var(--container-color);
+  background-color: hsl(250, 42%, 59%);
   box-shadow: 0 4px 20px hsla(207, 24%, 8%, .4);
 }
 
@@ -131,26 +135,47 @@ body.dark-theme {
 .dark-theme .qualification__img,
 .dark-theme .testimonial__img {
   filter: invert(1);
+
 }
 
 .dark-theme .home__perfil {
-  background: linear-gradient(180deg,hsla(250, 48%, 72%, 0),hsla(250, 65%, 65%, 1));
-}
-
-.dark-theme .home__social-link {
-  color: var(--title-color);
+  background: linear-gradient(180deg, hsla(250, 48%, 72%, 0), hsla(250, 65%, 65%, 1));
 }
 
 .dark-theme .section__border {
   border-bottom: 1px solid hsl(207, 4%, 32%);
 }
 
+.dark-theme .home__title,
+.dark-theme .home__social-link,
+.dark-theme h3,
+.dark-theme i,
+.dark-theme .services__card i,
+.dark-theme .section__subtitle,
+.dark-theme .contact__data-title,
+.dark-theme .contact__form-tag,
+.dark-theme .projects__subtitle,
+.dark-theme .footer p {
+  color: hsl(250, 42%, 59%);
+}
+
+.dark-theme .skills__title,
+.dark-theme .qualification__title,
+.dark-theme .contact__title,
+.dark-theme .scrollup i,
+.dark-theme .skills__subtitle,
+.dark-theme .qualification__country,
+.dark-theme .qualification__year {
+  color: var(--title-color);
+}
+
 .dark-theme::-webkit-scrollbar {
   background-color: hsl(207, 4%, 15%);
+
 }
 
 .dark-theme::-webkit-scrollbar-thumb {
-  background-color: hsl(207, 4%, 25%);
+  background-color: hsl(250, 42%, 59%);
 }
 
 .dark-theme::-webkit-scrollbar-thumb:hover {
@@ -178,7 +203,7 @@ body.dark-theme {
   padding-bottom: 3.5rem;
 }
 
-.section__title, 
+.section__title,
 .section__subtitle {
   text-align: center;
 }
@@ -197,7 +222,8 @@ body.dark-theme {
 }
 
 .main {
-  overflow: hidden; /* For animation */
+  overflow: hidden;
+  /* For animation */
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -218,7 +244,8 @@ body.dark-theme {
   box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
   padding-inline: 1.5rem;
   border-radius: 3rem;
-  transition: background .4s; /* for dark mode animation */
+  transition: background .4s;
+  /* for dark mode animation */
 }
 
 .nav__logo,
@@ -251,7 +278,7 @@ body.dark-theme {
     padding: 2rem 1.5rem 5rem;
     border-radius: 2rem;
     transition: bottom .3s;
-  }  
+  }
 }
 
 .nav__list {
@@ -325,7 +352,8 @@ body.dark-theme {
   /* border-radius:50%; */
   border-radius: 6.25rem;
   place-items: center;
-  transition: background .4s; /* for dark mode animation */
+  transition: background .4s;
+  /* for dark mode animation */
 }
 
 .home__perfil {
@@ -337,9 +365,9 @@ body.dark-theme {
   /* border-radius: 50%; */
   /* border: 0.1px solid var(--text-color-light); */
   overflow: hidden;
-  display:flex;
+  display: flex;
   justify-content: center;
-  align-items: flex-end;  
+  align-items: flex-end;
 }
 
 .home__perfil img {
@@ -349,7 +377,7 @@ body.dark-theme {
 .home__shape-wawes,
 .home__shape-circle {
   position: absolute;
-  opacity: .1;  
+  opacity: .1;
 }
 
 .home__shape-wawes {
@@ -406,7 +434,7 @@ body.dark-theme {
 .home__info-description,
 .home__info-number {
   font-family: var(--title-font);
-  color: var(--title-color);  
+  color: var(--title-color);
 }
 
 .home__info-description {
@@ -464,7 +492,8 @@ body.dark-theme {
   border-radius: 3rem;
   place-items: center;
   margin-bottom: 1rem;
-  transition: background .4s; /* for dark mode animation */
+  transition: background .4s;
+  /* for dark mode animation */
 }
 
 .skills__blob img {
@@ -482,7 +511,7 @@ body.dark-theme {
 }
 
 /* Animation skills */
-.skills__blob:hover img{
+.skills__blob:hover img {
   animation: bounce-skills .6s;
 }
 
@@ -490,15 +519,19 @@ body.dark-theme {
   0% {
     transform: translate(0);
   }
+
   20% {
     transform: translateY(-6px);
   }
+
   40% {
     transform: translate(0);
   }
+
   60% {
     transform: translateY(-3px);
   }
+
   80% {
     transform: translate(0);
   }
@@ -557,10 +590,11 @@ body.dark-theme {
   transform: rotate(15deg);
   opacity: .1;
 }
+
 /*=============== SERVICES ===============*/
 .services__container {
   row-gap: 2.5rem;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .services__card {
@@ -571,7 +605,8 @@ body.dark-theme {
   text-align: center;
   padding: 3.5rem 1rem;
   border-radius: 7.25rem;
-  transition: background .4s; /* for dark mode animation */ 
+  transition: background .4s;
+  /* for dark mode animation */
 }
 
 .services__card i {
@@ -579,7 +614,7 @@ body.dark-theme {
   font-size: 2rem;
   color: var(--title-color);
   margin-bottom: .75rem;
-  transition: transform .8s;  
+  transition: transform .8s;
 }
 
 .services__title {
@@ -606,7 +641,7 @@ body.dark-theme {
   transform: rotateY(360deg);
 }
 
-.services__card:hover .services__border{
+.services__card:hover .services__border {
   opacity: 1;
 }
 
@@ -657,7 +692,7 @@ body.dark-theme {
 /* Swiper class */
 .projects__container .swiper-button-prev::after,
 .projects__container .swiper-button-next::after {
-  content:'';
+  content: '';
 }
 
 .projects__container .swiper-button-prev,
@@ -860,7 +895,8 @@ body.dark-theme {
   font-size: var(--smaller-font-size);
   font-weight: var(--font-medium);
   padding: .35rem;
-  transition: background .4s; /* for dark mode animation */
+  transition: background .4s;
+  /* for dark mode animation */
 }
 
 .contact__form-area {
@@ -877,9 +913,9 @@ body.dark-theme {
   font-size: var(--h2-font-size);
   font-family: var(--title-font);
   font-weight: var(--font-semi-bold);
-  cursor:pointer;
+  cursor: pointer;
   outline: none;
-  margin-top: .75rem;  
+  margin-top: .75rem;
 }
 
 .contact__form .contact__button i {
@@ -918,7 +954,7 @@ body.dark-theme {
 .footer__list,
 .footer__social {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .footer__list {
@@ -950,7 +986,7 @@ body.dark-theme {
 
 .footer__copy {
   display: block;
-  margin-top:  4.5rem;
+  margin-top: 4.5rem;
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
 }
@@ -970,7 +1006,7 @@ body.dark-theme {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(207, 4%, 55%);  
+  background-color: hsl(207, 4%, 55%);
 }
 
 
@@ -1016,7 +1052,7 @@ body.dark-theme {
   }
 
   .skills__info {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .projects__img {
@@ -1028,6 +1064,7 @@ body.dark-theme {
 
 /* For medium devices */
 @media screen and (min-width:576px) {
+
   .nav,
   .nav__menu {
     width: 380px;
@@ -1042,7 +1079,7 @@ body.dark-theme {
   }
 
   .project__container {
-   width: 400px;
+    width: 400px;
   }
 
   .project__container,
@@ -1060,7 +1097,7 @@ body.dark-theme {
 
   .project__container .swiper-button-next {
     right: 1rem;
-}
+  }
 }
 
 @media screen and (min-width:767px) {
@@ -1091,7 +1128,7 @@ body.dark-theme {
   .contact__container {
     grid-template-columns: repeat(2, max-content);
   }
-  
+
   .skills__container,
   .services__container {
     column-gap: 5rem;
@@ -1152,16 +1189,20 @@ body.dark-theme {
 
   .nav__list {
     display: flex;
-    column-gap: 3rem;    
+    column-gap: 3rem;
   }
 
   .nav__link {
     font-size: var(--normal-font-size);
   }
 
+  .dark-theme .header {
+    background-color: hsl(250, 42%, 59%);
+  }
+
   .dark-theme .nav,
   .dark-theme .nav__menu {
-    background-color: var(--body-color);
+    background-color: hsl(250, 42%, 59%);
     box-shadow: none;
   }
 
@@ -1199,7 +1240,7 @@ body.dark-theme {
   }
 }
 
-@media screen and (min-width: 1048px){
+@media screen and (min-width: 1048px) {
   .container {
     margin-inline: auto;
   }
