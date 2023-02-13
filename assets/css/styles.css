@@ -159,6 +159,7 @@ body.dark-theme {
   color: hsl(250, 42%, 59%);
 }
 
+.dark-theme .change-theme,
 .dark-theme .skills__title,
 .dark-theme .qualification__title,
 .dark-theme .contact__title,
